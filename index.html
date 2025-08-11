@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wee Mudge - Premium Pet Essentials for the Discerning Traveler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+        }
+        .section-padding {
+            padding: 8rem 0; /* Increased padding for more space */
+        }
+        .max-w-7xl {
+            max-width: 90rem; /* Increased max-width for a wider layout */
+        }
+        .media-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* Maintain 4:3 aspect ratio for placeholders */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem; /* Rounded corners */
+        }
+        .media-container video,
+        .media-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure media covers the container */
+            transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+        }
+        .media-container img {
+            opacity: 0; /* Image initially hidden */
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Header -->
+    <header class="bg-black text-white py-6 fixed w-full z-10 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div class="flex items-center space-x-4">
+                <img src="http://googleusercontent.com/file_content/0" alt="Wee Mudge Icon" class="h-10 w-10 object-contain rounded-full">
+                <h1 class="text-3xl font-bold tracking-tight">Wee Mudge</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-8 text-lg">
+                    <li><a href="#collection" class="hover:text-gray-400 transition duration-300">Collection</a></li>
+                    <li><a href="#about" class="hover:text-gray-400 transition duration-300">About Us</a></li>
+                    <li><a href="#contact" class="hover:text-gray-400 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-black text-white flex items-center justify-center min-h-screen py-20">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-6xl font-extrabold mb-6 leading-tight fade-in-up">Elevate Every Journey.</h2>
+            <p class="text-2xl mb-12 max-w-3xl mx-auto fade-in-up delay-1">
+                For the discerning pet owner, Wee Mudge offers meticulously crafted essentials designed for comfort, durability, and style on every adventure.
+            </p>
+            <a href="#collection" class="inline-block bg-white text-black px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300 shadow-lg fade-in-up delay-2">
+                Discover Our Collection
+            </a>
+        </div>
+    </section>
+
+    <!-- Product Collection Section -->
+    <section id="collection" class="bg-white text-black section-padding">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h3 class="text-5xl font-extrabold text-center mb-20 fade-in-up">Our Curated Collection</h3>
+
+            <!-- Everyday Collar -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+                <div class="fade-in-up">
+                    <div class="media-container bg-gray-200 shadow-xl">
+                        <!-- Video for default view -->
+                        <video class="video-element" autoplay loop muted playsinline>
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-cute-dog-on-a-walk-in-the-city-5784-large.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- Image for hover view -->
+                        <img class="image-element" src="https://placehold.co/800x600/CCCCCC/333333?text=Everyday+Collar+Image" alt="Everyday Collar Image">
+                    </div>
+                </div>
+                <div class="fade-in-up delay-1">
+                    <h4 class="text-4xl font-bold mb-6">The Everyday Collar</h4>
+                    <p class="text-xl mb-6">
+                        Elegance for every moment. Crafted from the finest materials, our Everyday Collar combines classic style with unparalleled comfort, perfect for daily strolls or sophisticated city outings. Designed to be lightweight and gentle on your dog's fur.
+                    </p>
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>Luxurious, durable leather or vegan alternative</li>
+                        <li>Polished, hypoallergenic hardware</li>
+                        <li>Ergonomic design for ultimate comfort</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Waterproof Collar -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+                <div class="order-2 md:order-1 fade-in-up">
+                    <h4 class="text-4xl font-bold mb-6">The Waterproof Collar</h4>
+                    <p class="text-xl mb-6">
+                        Adventure-ready, come rain or shine. This collar is engineered for exploration, providing superior water resistance and easy cleaning, so your companion can embrace every splash and muddy trail without a worry.
+                    </p>
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>Advanced, quick-drying waterproof material</li>
+                        <li>Odor-resistant and easy to clean</li>
+                        <li>Robust hardware for secure fit in all conditions</li>
+                    </ul>
+                </div>
+                <div class="order-1 md:order-2 fade-in-up delay-1">
+                    <div class="media-container bg-gray-200 shadow-xl">
+                        <!-- Video for default view -->
+                        <video class="video-element" autoplay loop muted playsinline>
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-wet-dog-swimming-in-a-lake-6570-large.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- Image for hover view -->
+                        <img class="image-element" src="https://placehold.co/800x600/CCCCCC/333333?text=Waterproof+Collar+Image" alt="Waterproof Collar Image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leash -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+                <div class="fade-in-up">
+                    <div class="media-container bg-gray-200 shadow-xl">
+                        <!-- Video for default view -->
+                        <video class="video-element" autoplay loop muted playsinline>
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-dog-running-with-leash-5285-large.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- Image for hover view -->
+                        <img class="image-element" src="https://placehold.co/800x600/CCCCCC/333333?text=Leash+Image" alt="Leash Image">
+                    </div>
+                </div>
+                <div class="fade-in-up delay-1">
+                    <h4 class="text-4xl font-bold mb-6">The Perfect Leash</h4>
+                    <p class="text-xl mb-6">
+                        Seamlessly coordinated, impeccably crafted. Our leashes are designed to complement our collars, offering superior control and a comfortable grip. A statement of sophistication for every walk.
+                    </p>
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>Strong, yet supple materials for durability</li>
+                        <li>Comfort-grip handle for effortless control</li>
+                        <li>Robust swivel clasp for tangle-free walks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vest -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 fade-in-up">
+                    <h4 class="text-4xl font-bold mb-6">The Traveler's Vest</h4>
+                    <p class="text-xl mb-6">
+                        Designed for the most adventurous spirits. Our lightweight vest provides an extra layer of comfort and security, ideal for long journeys, chilly evenings, or simply an added touch of style.
+                    </p>
+                    <ul class="list-disc list-inside text-lg space-y-2">
+                        <li>Breathable, weather-resistant fabric</li>
+                        <li>Adjustable fit for maximum comfort</li>
+                        <li>Integrated D-ring for leash attachment</li>
+                    </ul>
+                </div>
+                <div class="order-1 md:order-2 fade-in-up delay-1">
+                    <div class="media-container bg-gray-200 shadow-xl">
+                        <!-- Video for default view -->
+                        <video class="video-element" autoplay loop muted playsinline>
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-dog-walking-in-the-mountains-6099-large.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- Image for hover view -->
+                        <img class="image-element" src="https://placehold.co/800x600/CCCCCC/333333?text=Traveler's+Vest+Image" alt="Traveler's Vest Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-black text-white section-padding">
+        <div class="container mx-auto text-center px-6 max-w-7xl">
+            <h3 class="text-5xl font-extrabold mb-12 fade-in-up">Our Philosophy</h3>
+            <p class="text-xl leading-relaxed max-w-4xl mx-auto mb-8 fade-in-up delay-1">
+                At Wee Mudge, we understand that your small companion is more than just a pet; they are a cherished member of your family, an integral part of your life's adventures. Our mission is to provide exquisite, functional accessories that meet the highest standards of luxury and durability, allowing you and your furry friend to explore the world in unparalleled comfort and style.
+            </p>
+            <p class="text-xl leading-relaxed max-w-4xl mx-auto fade-in-up delay-2">
+                Each product is meticulously designed and crafted with the discerning traveler in mind, ensuring that every detail contributes to a seamless and elegant journey, from cityscapes to serene landscapes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-white text-black py-24">
+        <div class="container mx-auto text-center px-6">
+            <h3 class="text-5xl font-extrabold mb-8 fade-in-up">Ready for Your Next Adventure?</h3>
+            <p class="text-2xl mb-12 max-w-3xl mx-auto fade-in-up delay-1">
+                Equip your Wee Mudge with the finest travel companions.
+            </p>
+            <a href="#collection" class="inline-block bg-black text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-gray-800 transition duration-300 shadow-lg fade-in-up delay-2">
+                Shop the Collection
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white py-12">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+            <div class="text-center md:text-left mb-6 md:mb-0">
+                <p class="text-lg">&copy; 2025 Wee Mudge. All rights reserved.</p>
+                <p class="text-md mt-2">Designed for the discerning pet owner.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-white hover:text-gray-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-white hover:text-gray-400 transition duration-300">Terms of Service</a>
+                <a href="#" class="text-white hover:text-gray-400 transition duration-300">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all media containers
+            const mediaContainers = document.querySelectorAll('.media-container');
+
+            mediaContainers.forEach(container => {
+                const video = container.querySelector('.video-element');
+                const image = container.querySelector('.image-element');
+
+                // Event listener for when mouse enters the container
+                container.addEventListener('mouseenter', () => {
+                    if (video && !video.paused) { // Only pause if video is playing
+                        video.pause();
+                        video.style.opacity = '0'; // Hide the video
+                    }
+                    if (image) {
+                        image.style.opacity = '1'; // Show the image
+                    }
+                });
+
+                // Event listener for when mouse leaves the container
+                container.addEventListener('mouseleave', () => {
+                    if (video && video.paused) { // Only attempt to play if video is paused
+                        video.style.opacity = '1'; // Show the video
+                        // Wrap play() in a try-catch to handle AbortError gracefully
+                        video.play().catch(error => {
+                            // Suppress AbortError, log other errors if necessary
+                            if (error.name !== "AbortError") {
+                                console.error("Video play error:", error);
+                            }
+                        });
+                    }
+                    if (image) {
+                        image.style.opacity = '0'; // Hide the image
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
